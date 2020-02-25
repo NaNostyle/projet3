@@ -1,0 +1,265 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: url("../images/dark_pattern.jpg") repeat;
+}
+
+#bienvenue {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  z-index: 2;
+  position: absolute;
+  top: 0px;
+  border-radius: 10px 10px;
+  height: 100%;
+}
+
+.velovimg {
+  width: 10%;
+  vertical-align: -11px;
+}
+
+.villeimg {
+  width: 30%;
+}
+
+.btn {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px 10px;
+  background-color: #0066B1;
+  width: 20%;
+  height: 22%;
+  align-items: center;
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 20px;
+  width: 150px;
+  border: none;
+  height: 60px;
+}
+
+.demarrer {
+  transition: background-color 0.6s ease;
+}
+
+.btn:hover {
+  background-color: #E10203;
+  cursor: pointer;
+}
+
+.slideshow-container {
+  position: relative;
+  height: 70vh;
+  width: 70vw;
+
+  margin: auto;
+  margin-bottom: 80px;
+  overflow: hidden;
+}
+/* 
+début code diaporama */
+.slide > img {
+  width: 100%;
+  display: block;
+}
+
+.slide {
+  position: absolute;
+  background-color: red;
+  background-size: contain;
+  border-radius: 10px 10px;
+  transition: opacity 1s ease-in-out;
+  overflow: hidden;
+  height: 70vh;
+  width: 70vw;
+}
+
+#arrow-left,
+#arrow-right {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 5px 5px 0;
+  background-color: rgba(255, 255, 255, 0.8)
+}
+
+#arrow-right {
+  right: 0;
+  border-radius: 5px 0px 0px 5px;
+}
+
+#arrow-left {
+  left: 0;
+}
+
+.fa-angle-double-left,
+.fa-angle-double-right {
+  color: #E10203;
+}
+
+#arrow-left:hover,
+#arrow-right:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+  color: black;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 25%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 1);
+
+}
+
+.text h2 {
+  font-size: 1.5vw;
+}
+
+.icon {
+  width: 3vw;
+}
+
+.text span {
+  color: #E10203;
+}
+
+.text img {
+  vertical-align: middle;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #0066B1;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+
+aside p {
+  margin-bottom: 8px;
+}
+
+.infos-station {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-reserver, .btn-clear {
+  color: white;
+  border-radius: 10px 10px;
+  background-color: #0066B1;
+  width: 150px;
+  height: 40px;
+  align-items: center;
+  font-weight: bold;
+  font-size: 25px;
+}
+.active,
+.dot:hover {
+  background-color: #E10203;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+
+#canvas {
+  border: solid 4px #E10203;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 85%;
+  margin: auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  height: 620px;
+  margin: 10px;
+  position: relative;
+}
+
+#map {
+  width: 100%;
+  border-radius: 10px 10px;
+}
+
+aside {
+  background-color: rgba(255, 255, 255, 1);
+  color: black;
+  display: none;
+  padding: 20px;
+  width: 500px;
+  height: 100%;
+  border-radius: 10px 10px;
+  margin-left: 10px;
+}
+
+.footer {
+  height: 400px;
+  background-color: white;
+  border-radius: 10px 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.canvasButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Application de réservation en ligne de vélos pour la ville de Lyon. Elle est alimentée par l'API de JCDecaux.">
+    <meta name="Keywords" content="Velo'v apllication reservation">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <title>Velo'v Lyon</title>
+</head>
+
+<body>
+    <script src="../js/ajax.js"></script>
+    <script src="../js/markercluster.js"></script>
+    <script src="../js/Station.js"></script>
+    <script src="../js/map.js"></script>
+
+
+
+    <div class="container">
+
+
+        <div class="slideshow-container">
+
+            <div id="bienvenue">
+                <img class="villeimg" src="../images/logos-ville-de-lyon-HD.png">
+                <h1>Bienvenue sur l'application de location
+                    <img class="velovimg" src="../images/velov.gif"> de la ville de Lyon.</h1>
+                <a href="#demarrer" class="demarrer btn">Démarrer</a>
+
+            </div>
+
+
+            <div class="slide">
+                <img src="../images/capture_map.png">
+                <div class="text">
+                    <h2>1 Zoomez sur la carte
+                        <span>ci-dessous</span>, à l'aide de "CTRL + Molette de défilement" jusqu'à obtenir l'affichage du marqueur
+                        <img class="icon" src="../images/bike_map_marker_225-Icon.png"> de la station voulue.</h2>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="http://via.placeholder.com/1456x644/0000FF?text=INSTRUCTION+2">
+                <!-- <img src="../images/screenshot.png"> -->
+                <div class="text">
+                    <h2>2 Cliquez sur le marqueur
+                        <img class="icon" src="../images/bike_map_marker_225-Icon.png">puis apposez votre signature dans le cadre rouge prévu à cet effet.</h2>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="http://via.placeholder.com/1456x644/ffffff?text=INSTRUCTION+3">
+                <div class="text">
+                    <h2>3 Zoomez sur la carte ci-dessous, à l'aide de "CTRL + Molette de défilement" jusqu'à obtenir l'affichage
+                        du marqueur
+                        <img class="icon" src="../images/bike_map_marker_225-Icon.png"> de la station voulue.</h2>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="http://via.placeholder.com/1456x644/E8117F?text=INSTRUCTION+4">
+                <div class="text">
+                    <h2>4 Zoomez sur la carte ci-dessous, à l'aide de "CTRL + Molette de défilement" jusqu'à obtenir l'affichage
+                        du marqueur
+                        <img class="icon" src="../images/bike_map_marker_225-Icon.png"> de la station voulue.</h2>
+                </div>
+            </div>
+
+            <div class="arrows">
+                <a id="arrow-left">
+                    <i class="fa fa-angle-double-left fa-2x"></i>
+                </a>
+                <a id="arrow-right">
+                    <i class="fa fa-angle-double-right fa-2x"></i>
+                </a>
+            </div>
+        </div>
+
+
+
+        <div class="content">
+            <div id="map"></div>
+            <aside>
+
+                <div class="infos-station">
+                    <h3>Nom de la station : </h3>
+                    <p></p>
+                    <h3>Statut de la station : </h3>
+                    <p></p>
+                    <h3>Adresse de la station : </h3>
+                    <p></p>
+                    <h3>Nombre de vélos disponibles : </h3>
+                    <p></p>
+                    <h3>Places de vélos disponibles : </h3>
+                    <p></p>
+
+                    <canvas id="canvas" width="250px" height="250px">
+                        Sorry your browser sucks
+                    </canvas>
+                    <div class="canvasButtons">
+                        <button type="submit" class="btn">Réserver</button>
+                        <button type="submit" class="btn" id="clear">Effacer</button>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <div class="footer">
+            <p id="timeout">Il vous reste
+                <span id="timeleft"></span>pour récupérer votre vélo à la station</p>
+
+        </div>
+    </div>
+    <script src="../js/CountDown.js"></script>
+    <script src="../js/Canvas.js"></script>
+    <script src="../js/Slideshow.js"></script>
+    <script src="../js/main.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiW_RZ93xOfB6h7CI1QEqnjzm27ABREXc&callback=initMap"></script>
+</body>
+
+</html>
